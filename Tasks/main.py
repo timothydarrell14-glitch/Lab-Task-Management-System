@@ -1,8 +1,4 @@
-# Import functions from task_manager.task_utils package
-from task_utils import add_task
-from task_utils import mark_task_as_complete
-from task_utils import view_pending_tasks
-from task_utils import calculate_progress
+from task_utils import add_task, mark_task_as_complete, view_pending_tasks, calculate_progress
 
 # Define the main function
 def main():
@@ -18,7 +14,7 @@ def main():
         if choice == "1":
             title = input("Enter title of Task").strip()
             description = input("Enter the description of the task").stip()
-            due_date = input("Enter the due date of the task").strip
+            due_date = input("Enter the due date of the task(YYYY-MM-DD)").strip
             add_task(title, description, due_date)
         elif choice == '2':
             mark_task_as_complete()

@@ -10,16 +10,16 @@ tasks = []
 
 # Implement add_task function
 def add_task(title, description, due_date):
-    validate_task_title(title)
-    validate_task_description(description)
-    validate_due_date(due_date)
+    title = validate_task_title(title)
+    description = validate_task_description(description)
+    due_date = validate_due_date(due_date)
+
     tasks.append({
         'title': title,
         'description': description,
         'due_date': due_date,
         'completed': False
     })
-    
     print("Task added successfully!")
     
 # Implement mark_task_as_complete function
