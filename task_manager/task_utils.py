@@ -4,10 +4,7 @@ from datetime import datetime
 from task_manager.validation import (validate_due_date,validate_task_description, validate_task_title,)
 
 # Define tasks list
-task = {"title": "Groceries",
- "description": "Shop at Market Basket for food", 
- "due_date": "2024-06-26",
- "completed": True}
+tasks = []
 
 # Implement add_task function
 def add_task(title, description, due_date):
@@ -15,7 +12,7 @@ def add_task(title, description, due_date):
     description = validate_task_description(description)
     due_date = validate_due_date(due_date)
 
-    task.append({
+    tasks.append({
         'title': title,
         'description': description,
         'due_date': due_date,
@@ -30,13 +27,13 @@ def mark_task_as_complete():
     print("Task marked as complete!")
     
 # Implement view_pending_tasks function
-def view_pending_tasks(tasks = task):
+def view_pending_tasks(tasks = tasks):
     for task in tasks:
         if task['completed'] == False:
             print(task)
 
 # Implement calculate_progress function
-def calculate_progress(tasks=task):
+def calculate_progress(tasks=tasks):
     completed = 0
     for task in tasks:
         if task['completed'] == True:
