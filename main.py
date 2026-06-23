@@ -18,6 +18,7 @@ def main():
             add_task(title, description, due_date)
         elif choice == '2':
             mark_task_as_complete()
+            print("Task marked as complete!")
         elif choice == '3':
             view_pending_tasks()
         elif choice == '4':
