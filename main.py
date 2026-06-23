@@ -17,7 +17,7 @@ def main():
             due_date = input("Enter the due date of the task(YYYY-MM-DD)").strip()
             add_task(title, description, due_date)
         elif choice == '2':
-            mark_task_as_complete()
+            mark_task_as_complete(0)
         elif choice == '3':
             view_pending_tasks()
         elif choice == '4':
