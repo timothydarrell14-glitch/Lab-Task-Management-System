@@ -13,8 +13,8 @@ def main():
 
         if choice == "1":
             title = input("Enter title of Task").strip()
-            description = input("Enter the description of the task").stip()
-            due_date = input("Enter the due date of the task(YYYY-MM-DD)").strip
+            description = input("Enter the description of the task").strip()
+            due_date = input("Enter the due date of the task(YYYY-MM-DD)").strip()
             add_task(title, description, due_date)
         elif choice == '2':
             mark_task_as_complete()
